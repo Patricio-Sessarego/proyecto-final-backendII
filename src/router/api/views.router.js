@@ -191,7 +191,7 @@ router.get('/:cid/purchase' , user , async (req , res , next) => {
 
                 await ticketRepository.createTicket(ticket)
 
-                await transport.sendMail({
+                await transport.sendMail({ //CHAT GPT ME AYUDO UN POCO CON EL DISEÑO :)
                     from: "Compra Gamer <remiiixxx123@gmail.com>",
                     to: `${req.user.email}`,
                     subject: "¡TU COMPRA HA SIDO CONFIRMADA! 🎮",
